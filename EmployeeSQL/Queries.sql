@@ -44,7 +44,7 @@ INNER JOIN dept_emp demp
 ON emp.emp_no = demp.emp_no
 INNER JOIN departments dept
 ON dept.dept_no = demp.dept_no
-WHERE dept_dame = 'Sales';
+WHERE dept_name = 'Sales';
 
 --List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
 SELECT emp.emp_no, emp.first_name, emp.last_name, dept.dept_name
@@ -53,7 +53,7 @@ INNER JOIN dept_emp demp
 ON emp.emp_no = demp.emp_no
 INNER JOIN departments dept
 ON dept.dept_no = demp.dept_no
-WHERE dept_dame IN('Sales', 'Development');
+WHERE dept_name IN('Sales', 'Development');
 
 ---In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
 SELECT emp.last_name, COUNT(emp.last_name)
